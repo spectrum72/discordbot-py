@@ -8,7 +8,7 @@ import asyncio
 load_dotenv()
 
 #REFIX = os.environ['PREFIX']
-TOKEN = os.environ['TOKEN']
+CLIENT_TOKEN = os.environ['CLIENT_TOKEN']
 
 client = commands.Bot(command_prefix="/", intents=discord.Intents.all())
 
