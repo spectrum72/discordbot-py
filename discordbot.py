@@ -3,6 +3,7 @@ from distutils.sysconfig import PREFIX
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+from PyKakao import KoGPT
 import os
 import asyncio
 load_dotenv()
@@ -14,8 +15,10 @@ client = commands.Bot(command_prefix="/", intents=discord.Intents.all())
 
 @client.event
 async def on_ready():
+    
+    api = KoGPT(service_key = '8597e85508f4673ad4b63a8fa540a834')
     print(f'Logged in as {client.user}.')
-
+    
 async def load():
     for file in os.listdir("./Cogs"):
         if file.endswith(".py"):
