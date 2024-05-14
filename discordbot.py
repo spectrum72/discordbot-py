@@ -41,7 +41,7 @@ async def on_message(message):
         # 결과 조회
         result = api.generate(prompt, max_tokens, temperature=0.7, top_p=0.8)
         
-        await message.channel.send(result[0].text)
+        await message.channel.send(result[0])
 
     #if message.content == f'{PREFIX}call':
     #    await message.channel.send("callback!")
