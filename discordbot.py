@@ -23,7 +23,8 @@ player = None
 async def on_ready():
     
     print(f'Logged in as {client.user}.')
-    
+
+@client.setup_hook
 async def load():
     for file in os.listdir("./Cogs"):
         if file.endswith(".py"):
